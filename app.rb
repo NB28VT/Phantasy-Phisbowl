@@ -32,6 +32,11 @@ end
 
 post '/prediction/submit' do
 
-  flash.next[:notice] = "Predictions submitted!"
-  redirect '/PhantasyPhootball/Predictions'
+  if params.values.any? { |submission| submission.empty? }
+    flash.next[:notice] = "No blank submissions!"
+    redirect '/PhantasyPhootball/Predictions'
+  else
+    flash.next[:notice] = "Predictions submitted!"
+    redirect '/PhantasyPhootball/Predictions'
+  end
 end

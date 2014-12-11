@@ -24,23 +24,22 @@ feature "User submits predictions %Q{ As a nerdy Phishhead, I would like to be a
     fill_in("S2 Opener", with: "Golden Age")
     fill_in("S2 Closer", with: "Harry Hood")
     fill_in("Encore", with: "Sleeping Monkey")
-    save_and_open_page
     click_on "Submit"
 
     expect(page).to have_content "Predictions submitted!"
   end
 
+  scenario "User can't submit blank fields without getting an error" do
+    visit '/PhantasyPhootball/Predictions'
+    fill_in('S1 Opener', with: '')
+    fill_in("S1 Closer", with: "Anarchy in the U.K.")
+    fill_in("S2 Opener", with: "Golden Age")
+    fill_in("S2 Closer", with: "Harry Hood")
+    fill_in("Encore", with: "Sleeping Monkey")
+    click_on "Submit"
 
-
-
-
-
-
-
-
-
-
-
+    expect(page).to have_content "No blank submissions!"
+  end
 
 
 end
