@@ -1,14 +1,71 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello World</title>
-    <link rel="stylesheet" href="/stylesheets/app.css" />
-  </head>
-  <body>
-    <%= yield %>
+<head>
+  <meta charset="utf-8">
+  <title>Phantasy Phootball</title>
+  <link rel= "stylesheet" href= "/stylesheets/vendor/foundation.min.css">
+</head>
 
-    <script src="/javascripts/app.js"></script>
-  </body>
+<body>
+
+
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="/PhantasyPhootball">Phantasy Phishbowl</a></h1>
+      </li>
+      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="active"><a href="/PhantasyPhootball/Predictions">Sign in</a></a></li>
+        <li class="has-dropdown">
+          <a href="#">Menu</a>
+          <ul class="dropdown">
+            <li><a href="/PhantasyPhootball/Predictions">User</a></li>
+            <li class="active"><a href= "/PhantasyPhootball/Predictions">Predictions</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <li><a href="/PhantasyPhootball">Home</a></li>
+        <li><a href="/PhantasyPhootball/Predictions">Make Picks</a></li>
+        <li><a href="#">Scoreboard</a></li>
+      </ul>
+    </section>
+  </nav>
+
+  <%= yield %>
+
+
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr/>
+      <div class="row">
+        <div class="large-6 columns">
+          <p>©2015 Nathan Burgess <a href= "https://github.com/NB28VT">Github</a></a></p>
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list right">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+            <li><a href="#">Link 5</a></li>
+            <li><a href="#">Link 6</a></li>
+            <li><a href="#">Link 7</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+</body>
+
 </html>

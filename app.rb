@@ -1,6 +1,8 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/reloader'
+require 'pg'
+require 'pry'
 
 configure :development, :test do
   require 'pry'
@@ -15,7 +17,13 @@ Dir[File.join(File.dirname(__FILE__), 'app', '**', '*.rb')].each do |file|
   also_reload file
 end
 
-get '/' do
-  @title = "Hello World"
+get '/PhantasyPhootball' do
+
   erb :index
+end
+
+
+get '/PhantasyPhootball/Predictions' do
+
+  erb :predictions
 end
