@@ -20,7 +20,7 @@
     <section class="top-bar-section">
       <!-- Right Nav Section -->
       <ul class="right">
-        <li class="active"><a href="/PhantasyPhootball/Predictions">Sign in</a></a></li>
+        <li class="active"><a href="/PhantasyPhootball/Predictions">Sign in</a></li>
         <li class="has-dropdown">
           <a href="#">Menu</a>
           <ul class="dropdown">
@@ -39,6 +39,14 @@
     </section>
   </nav>
 
+  <% if flash.any? %>
+  <div class="flash">
+    <div class="container">
+      <%= flash[:notice] %>
+    </div>
+  </div>
+  <% end %>
+
   <%= yield %>
 
 
@@ -47,7 +55,7 @@
       <hr/>
       <div class="row">
         <div class="large-6 columns">
-          <p>©2015 Nathan Burgess <a href= "https://github.com/NB28VT">Github</a></a></p>
+          <p>©2015 Nathan Burgess <a href= "https://github.com/NB28VT">Github</a></p>
         </div>
         <div class="large-6 columns">
           <ul class="inline-list right">

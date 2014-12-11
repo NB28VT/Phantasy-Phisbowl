@@ -1,55 +1,45 @@
-# Sinatra Active Record Starter Kit
+PHANTASY PHOOTBALL
+###########################################################################
+############
+#########################################################################
 
-This template provides a basic [Sinatra](http://www.sinatrarb.com/) application
-that includes:
 
-- [Active Record](http://guides.rubyonrails.org/active_record_querying.html)
-using [sinatra-activerecord](https://github.com/janko-m/sinatra-activerecord)
-- [PostgreSQL](http://www.postgresql.org/) for a database
-- [Sinatra::Reloader](http://www.sinatrarb.com/contrib/reloader.html) to
-  automatically reload modified files during development
-- [RSpec](https://github.com/rspec/rspec) for unit testing
-- [Capybara](https://github.com/jnicklas/capybara) for acceptance testing
-- [Pry](https://github.com/pry/pry) for debugging
+Phantasy Phootball is a game that allows a league of friends to make Phish set
+list predictions in a fantasy football-like atmosphere. Users will be able to
+select a number of predictions such as set 1 opener, set 2 closer, and others
+using a simple interface. The app will query the Phish.net API after a show has
+been performed, and award points to each user based on how good their predictions
+were.
 
-## Getting Started
 
-```no-highlight
-# Clone down this template
-git clone git@github.com:LaunchAcademy/sinatra-activerecord-starter-kit.git <YOUR_APP_NAME>
+######################################
+USER STORIES
+#####################################
 
-# Move into your app's directory
-cd <YOUR_APP_NAME>
+1. As a nerdy Phishhead, I would like to be able to submit predictions for the
+songs Phish will play in the following setlist spots before every show:
 
-# Install all the gems
-bundle install
+* Set 1 opener
+* Set 1 closer
+* Set 2 opener
+* Set 2 closer
+* Encore
+* Cover song (a song by another band that is not a Phish solo band)
+* Elemental song (relating to an earth element, like fire, light etc.)
+* Gamehendge song (a song the references the band's fictional universe,
+Gamehendge (http://en.wikipedia.org/wiki/Gamehendge))
+* Five wild card songs that could appear anywhere
+* A song about an animal
+* A song with a name as a title
+* A song about a place
 
-# Remove the old git history and start your own
-rm -rf .git && git init && git add -A && git commit -m 'Initial commit'
-```
+2. As a poor Phishhead who doesn't have any money to go on tour, I'd like to be
+able to automatically have the app check my predictions based on the most
+current show.
 
-### Configuring Your Database
+3. As a nerdy Phishead, I would like to be able to check how long it has been
+since Phish played my favorite song.
 
-This template is set up for using a PostgreSQL database. You will need to create a
-`config/database.yml`. There is an example at `config/database.example.yml`.
 
-Once you've created a `config/database.yml`, you can create your database with
-`rake db:create`.
-
-## Rake Tasks
-
-This template uses the [sinatra-activerecord](https://github.com/janko-m/sinatra-activerecord)
-gem, which provides the following rails-like rake tasks:
-
-```no-highlight
-rake db:create            # create the database from config/database.yml from the current Sinatra env
-rake db:create_migration  # create an ActiveRecord migration
-rake db:drop              # drops the data from config/database.yml from the current Sinatra env
-rake db:migrate           # migrate the database (use version with VERSION=n)
-rake db:rollback          # roll back the migration (use steps with STEP=n)
-rake db:schema:dump       # dump schema into file
-rake db:schema:load       # load schema into database
-rake db:seed              # load the seed data from db/seeds.rb
-rake db:setup             # create the database and load the schema
-rake db:test:prepare      # Prepare test database from development schema
-```
+4. As a bored Phishhead waiting for Phish to go back on tour, I'd like to check
+my predictions against a random show given a year.  
